@@ -15,7 +15,8 @@ export const boxes = createTable(
   'box',
   {
     id: int('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-    name: text('name', { length: 256 }),
+    name: text('name', { length: 256 }).notNull(),
+    description: text('description', { length: 256 }),
     createdAt: int('created_at', { mode: 'timestamp' })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
@@ -36,9 +37,22 @@ export const items = createTable('item', {
     .notNull(),
   updatedAt: int('updatedAt', { mode: 'timestamp' }),
 })
+
+export const labels = createTable('label', {
+  id: int('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
+  name: text('name', { length: 256 }).notNull(),
+  createdAt: int('created_at', { mode: 'timestamp' })
+    .default(sql`CURRENT_TIMESTAMP`)
+    .notNull(),
+})
+
 export const boxRelations = relations(boxes, ({ many }) => ({
   items: many(items),
 }))
-export const itemRelations = relations(items, ({ one }) => ({
+export const itemRelations = relations(items, ({ many, one }) => ({
   box: one(boxes),
+  labels: many(labels),
+}))
+export const labelRelations = relations(labels, ({ many }) => ({
+  items: many(items),
 }))
