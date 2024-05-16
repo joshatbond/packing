@@ -3,6 +3,7 @@
 ## Todo
 
 - [ ] Deploy to vercel
+- [ ] Connect to URL
 - [ ] Scaffold basic ui with mock data
   - [ ] Landing page
   - [ ] Forms for adding new boxes/items
