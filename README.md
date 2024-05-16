@@ -2,8 +2,9 @@
 
 ## Todo
 
-- [ ] Deploy to vercel
-- [ ] Connect to URL
+- [x] Deploy to vercel
+- [x] Connect to URL
+- [x] Update metadata
 - [ ] Scaffold basic ui with mock data
   - [ ] Landing page
   - [ ] Forms for adding new boxes/items
