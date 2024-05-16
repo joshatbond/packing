@@ -10,7 +10,7 @@
   - [ ] Forms for adding new boxes/items
   - [ ] Page to display all boxes
     - [ ] Search
-- [ ] Set up database (drizzle/turso)
+- [ ] Set up database (drizzle/vercel-postgres)
 - [ ] Attach database to ui
 - [ ] Add authentication (clerk)
 - [ ] Image upload for items (UploadThing)
