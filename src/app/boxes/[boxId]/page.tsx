@@ -16,7 +16,7 @@ export default function BoxPage({ params }: { params: { boxId: string } }) {
   return (
     <main className="flex min-h-screen flex-col p-4">
       <div className="mb-4 flex items-center gap-4">
-        <Link href={`/boxes`}>
+        <Link href={`/`}>
           <div className="rounded bg-neutral-300 p-1 text-neutral-900 focus-within:bg-neutral-100 hover:bg-neutral-100">
             <CaretLeftIcon className="h-4 w-4" />
           </div>
