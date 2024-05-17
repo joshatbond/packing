@@ -1,6 +1,3 @@
-import { CaretLeftIcon } from '@radix-ui/react-icons'
-import Link from 'next/link'
-
 import { Image } from '~/app/_components/Image'
 import { mockData } from '~/lib/mockData'
 
